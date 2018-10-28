@@ -1,9 +1,9 @@
 {
     "app-id": "com.github.marktext.marktext",
     "base": "org.electronjs.Electron2.BaseApp",
-    "base-version": "stable",
+    "base-version": "18.08",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "1.6",
+    "runtime-version": "18.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "marktext",
     "rename-appdata-file": "marktext.appdata.xml",
@@ -38,21 +38,20 @@
             },
             "build-commands": [
                 "chmod +x build-marktext.sh",
-                "chmod +x marktext_x86_64.AppImage",
                 "./build-marktext.sh"
             ],
             "sources": [
                 {
-                    "type": "file",
+                    "type": "archive",
                     "only-arches": ["x86_64"],
-                    "url": "https://github.com/marktext/marktext/releases/download/v0.12.25/marktext-0.12.25-x86_64.AppImage",
-                    "sha256": "22285da237ab8bcffc60799897230bb359692e4dc4178dd9dab123b34db33046",
-                    "dest-filename": "marktext_x86_64.AppImage"
+                    "url": "https://github.com/marktext/marktext/releases/download/v0.13.53/marktext-0.13.53.tar.gz",
+                    "sha256": "1e3c135b30664a4575cdbee08cb60a50172843082a75ab01bf2dc0466bb70c24",
+                    "dest": "marktext_binary"
                 },
                 {
                     "type": "git",
                     "url": "https://github.com/marktext/marktext.git",
-                    "commit": "746969e7053b4c633786bdd433dcef1d523fdf26"
+                    "commit": "cdc9c6c8abc50a3b70de143f996e2c13b62d51c5"
                 },
                 {
                     "type": "file",

@@ -2,7 +2,7 @@
 
 ROOT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-pushd "${ROOT_DIR}/.."
+pushd "${ROOT_DIR}/.." > /dev/null
 flatpak-builder \
     --force-clean \
     --ccache \
@@ -13,5 +13,4 @@ flatpak-builder \
     --sandbox \
     build \
     com.github.marktext.marktext.json
-popd
-
+popd > /dev/null
