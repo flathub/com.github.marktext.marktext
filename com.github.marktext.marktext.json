@@ -22,9 +22,38 @@
         "--filesystem=~/.config/dconf:ro",
         "--talk-name=ca.desrt.dconf",
         "--talk-name=com.canonical.AppMenu.Registrar",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.freedesktop.secrets",
         "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
     ],
     "modules": [
+        {
+            "name": "libsecret",
+            "config-opts": [
+                "--disable-manpages",
+                "--disable-gtk-doc",
+                "--disable-static",
+                "--disable-introspection"
+            ],
+            "cleanup": [
+                "/bin",
+                "/include",
+                "/lib/pkgconfig",
+                "/share/gtk-doc",
+                "*.la"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://ftp.gnome.org/pub/GNOME/sources/libsecret/0.18/libsecret-0.18.8.tar.xz",
+                    "sha256": "3bfa889d260e0dbabcf5b9967f2aae12edcd2ddc9adc365de7a5cc840c311d15"
+                },
+                {
+                    "type": "shell",
+                    "commands": ["autoreconf -f"]
+                }
+            ]
+        },
         {
             "name": "marktext",
             "buildsystem": "simple",
@@ -45,18 +74,22 @@
                 {
                     "type": "archive",
                     "only-arches": ["x86_64"],
-                    "url": "https://github.com/marktext/marktext/releases/download/v0.14.0/marktext-0.14.0-x64.tar.gz",
-                    "sha256": "d8c2ba1bba597fc0e42a298d5311871c90aea08ee9e07f85522c195c03008b96",
+                    "url": "https://github.com/marktext/marktext/releases/download/v0.15.0/marktext-0.15.0-x64.tar.gz",
+                    "sha256": "c6b5600dda6b6b1328359a236c0d0499a08e733d5b610a6eaf9b5ed8c1fcb6db",
                     "dest": "marktext_binary"
                 },
                 {
                     "type": "git",
                     "url": "https://github.com/marktext/marktext.git",
-                    "commit": "e54731f0138aed2c1e64e69c85b8c560d397478b"
+                    "commit": "65d12af922cb1fc2402eaab028ce5d9bc6917702"
                 },
                 {
                     "type": "file",
                     "path": "build-marktext.sh"
+                },
+                {
+                    "type": "file",
+                    "path": "marktext.sh"
                 }
             ]
         }

@@ -17,6 +17,8 @@ done
 mkdir -p /app/marktext
 mv ${BINARY_PATH}/* /app/marktext
 
-ln -sf /app/marktext/marktext /app/bin/marktext
+# ln -sf /app/marktext/marktext /app/bin/marktext
+cp marktext.sh /app/bin/marktext
+chmod +x /app/bin/marktext
 
 exit 0
