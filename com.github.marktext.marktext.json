@@ -1,14 +1,15 @@
 {
     "app-id": "com.github.marktext.marktext",
     "base": "org.electronjs.Electron2.BaseApp",
-    "base-version": "18.08",
+    "base-version": "19.08",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "18.08",
+    "runtime-version": "19.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "marktext",
     "rename-appdata-file": "marktext.appdata.xml",
     "rename-desktop-file": "marktext.desktop",
     "rename-icon": "marktext",
+    "separate-locales": false,
     "finish-args": [
         "--socket=x11",
         "--socket=wayland",
@@ -23,6 +24,7 @@
         "--talk-name=ca.desrt.dconf",
         "--talk-name=com.canonical.AppMenu.Registrar",
         "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.freedesktop.portal.Fcitx",
         "--talk-name=org.freedesktop.secrets",
         "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
     ],
