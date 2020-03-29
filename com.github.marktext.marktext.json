@@ -50,14 +50,14 @@
                 {
                     "type": "archive",
                     "only-arches": ["x86_64"],
-                    "url": "https://github.com/marktext/marktext/releases/download/v0.15.1/marktext-0.15.1-x64.tar.gz",
-                    "sha256": "0baed01300bfee64faa89a2013073cf94e74625566e10b363084aa7f883e55e4",
+                    "url": "https://github.com/marktext/marktext/releases/download/v0.16.1/marktext-x64.tar.gz",
+                    "sha256": "c8af8fd8da050fe7852b6ad2c4f78590a478e63f0f41832bf262800feefbffaa",
                     "dest": "marktext_binary"
                 },
                 {
                     "type": "git",
                     "url": "https://github.com/marktext/marktext.git",
-                    "commit": "517fe37c263947795a5824e41996d070feffd9c6"
+                    "commit": "1b6e98b9a1b6a7af14b444a1223c440992f54b7e"
                 },
                 {
                     "type": "file",
