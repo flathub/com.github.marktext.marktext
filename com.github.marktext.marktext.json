@@ -15,7 +15,6 @@
         "--socket=wayland",
         "--share=ipc",
         "--share=network",
-        "--filesystem=home",
         "--filesystem=host",
         "--filesystem=/tmp",
         "--device=dri",
