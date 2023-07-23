@@ -15,7 +15,6 @@
         "--socket=wayland",
         "--share=ipc",
         "--share=network",
-        "--filesystem=home",
         "--filesystem=host",
         "--filesystem=/tmp",
         "--device=dri",
@@ -25,6 +24,7 @@
         "--talk-name=org.freedesktop.secrets",
         "--filesystem=xdg-run/keyring",
         "--filesystem=xdg-run/dconf",
+        "--filesystem=xdg-config/gtk-3.0:ro",
         "--filesystem=~/.config/dconf:ro",
         "--talk-name=ca.desrt.dconf",
         "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
