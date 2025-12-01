@@ -6,7 +6,6 @@
     "runtime-version": "25.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "marktext",
-    "rename-desktop-file": "marktext.desktop",
     "rename-icon": "marktext",
     "separate-locales": false,
     "finish-args": [
