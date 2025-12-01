@@ -8,7 +8,7 @@ BINARY_PATH="marktext_binary"
 
 # Install desktop file and icons
 install -Dm644 resources/linux/marktext.desktop /app/share/applications/marktext.desktop
-install -Dm644 resources/linux/marktext.appdata.xml /app/share/appdata/marktext.appdata.xml
+install -Dm644 com.github.marktext.marktext.metainfo.xml /app/share/metainfo/com.github.marktext.marktext.metainfo.xml
 for IMG_SIZE in 16 24 32 48 64 128 256 512; do
     IMG_NAME=${IMG_SIZE}x${IMG_SIZE}
     install -Dm644 resources/icons/${IMG_NAME}/marktext.png /app/share/icons/hicolor/${IMG_NAME}/apps/marktext.png
