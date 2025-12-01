@@ -7,7 +7,7 @@ BINARY_PATH="marktext_binary"
 [ ! -d "$BINARY_PATH" ] && echo "[ERROR] Cannot find binary!" && exit 1;
 
 # Install desktop file and icons
-install -Dm644 resources/linux/marktext.desktop /app/share/applications/marktext.desktop
+install -Dm644 resources/linux/marktext.desktop /app/share/applications/com.github.marktext.marktext.desktop
 install -Dm644 com.github.marktext.marktext.metainfo.xml /app/share/metainfo/com.github.marktext.marktext.metainfo.xml
 for IMG_SIZE in 16 24 32 48 64 128 256 512; do
     IMG_NAME=${IMG_SIZE}x${IMG_SIZE}
