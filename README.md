@@ -1,6 +1,21 @@
 # Mark Text Flatpak
 
-## Development
+___Next generation markdown editor___
+
+MarkText is a free and open-source realtime preview markdown editor which support both CommonMark Spec and GitHub Flavored Markdown Spec. It is a concise text editor, dedicated to improving your writing efficiency.
+
+---
+
+## Manual Install and Run
+
+Make sure you follow the [setup guide for your Linux distribution](https://flathub.org/en/setup) before installing.
+
+```bash
+flatpak install flathub com.github.marktext.marktext
+flatpak run com.github.marktext.marktext
+```
+
+## Building
 
 ### Requirements
 
@@ -8,12 +23,12 @@
 - `org.freedesktop` platform/SDK
 - `org.electronjs.Electron2.BaseApp`
 
-### Scripts
+### Build commands
 
-- `build.sh`: build flatpak development files
-- `build-bundle.sh`: bundle application into flatpak package
-- `dev-install.sh`: install necessary flatpak packages
-- `test-marktext.sh`: execute build application
+```bash
+git clone git@github.com:flathub/com.github.marktext.marktext.git
+flatpak run org.flatpak.Builder build-dir --user --ccache --force-clean --install com.github.marktext.marktext.json
+```
 
 ## License
 
