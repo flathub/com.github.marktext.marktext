@@ -39,7 +39,6 @@
             "sources": [
                 {
                     "type": "archive",
-                    "only-arches": ["x86_64"],
                     "url": "https://github.com/marktext/marktext/releases/download/v0.17.1/marktext-x64.tar.gz",
                     "sha256": "6e333bcd1e8ae0cd93e1de52bdb966fdd9b8896986acb72f13d23ae100872e5c",
                     "dest": "marktext_binary"
