@@ -28,9 +28,9 @@
             "name": "marktext",
             "buildsystem": "simple",
             "build-commands": [
-                "install -Dm644 resources/linux/marktext.desktop -t /app/share/applications/",
-                "install -Dm644 resources/linux/marktext.appdata.xml -t /app/share/metainfo/",
-                "install -Dm644 resources/icons/256x256/marktext.png -t /app/share/icons/hicolor/256x256/apps/",
+                "install -Dm644 marktext.desktop -t /app/share/applications/",
+                "install -Dm644 marktext.appdata.xml -t /app/share/metainfo/",
+                "install -Dm644 marktext.png -t /app/share/icons/hicolor/512x512/apps/",
                 "mkdir -p /app/marktext",
                 "mv marktext_binary/* /app/marktext",
                 "cp marktext.sh /app/bin/marktext",
@@ -50,17 +50,20 @@
                     }
                 },
                 {
-                    "type": "git",
-                    "url": "https://github.com/marktext/marktext.git",
-                    "commit": "318929817c408ad5cb9700edfb05ffb196ca7974"
-                },
-                {
                     "type": "file",
                     "path": "marktext.sh"
                 },
                 {
-                    "type": "patch",
-                    "path": "fix-appdata.patch"
+                    "type": "file",
+                    "path": "marktext.desktop"
+                },
+                {
+                    "type": "file",
+                    "path": "marktext.appdata.xml"
+                },
+                {
+                    "type": "file",
+                    "path": "marktext.png"
                 }
             ]
         }
