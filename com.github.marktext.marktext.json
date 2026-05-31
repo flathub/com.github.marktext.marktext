@@ -28,9 +28,9 @@
             "name": "marktext",
             "buildsystem": "simple",
             "build-commands": [
-                "install -Dm644 resources/linux/marktext.desktop -t /app/share/applications/",
-                "install -Dm644 resources/linux/marktext.appdata.xml -t /app/share/metainfo/",
-                "install -Dm644 resources/icons/256x256/marktext.png -t /app/share/icons/hicolor/256x256/apps/",
+                "install -Dm644 marktext.desktop -t /app/share/applications/",
+                "install -Dm644 marktext.appdata.xml -t /app/share/metainfo/",
+                "install -Dm644 marktext.png -t /app/share/icons/hicolor/512x512/apps/",
                 "mkdir -p /app/marktext",
                 "mv marktext_binary/* /app/marktext",
                 "cp marktext.sh /app/bin/marktext",
@@ -39,26 +39,33 @@
             "sources": [
                 {
                     "type": "archive",
-                    "only-arches": ["x86_64"],
-                    "url": "https://github.com/marktext/marktext/releases/download/v0.17.1/marktext-x64.tar.gz",
-                    "sha256": "6e333bcd1e8ae0cd93e1de52bdb966fdd9b8896986acb72f13d23ae100872e5c",
-                    "dest": "marktext_binary"
-                },
-                {
-                    "type": "git",
-                    "url": "https://github.com/marktext/marktext.git",
-                    "commit": "318929817c408ad5cb9700edfb05ffb196ca7974"
+                    "url": "https://github.com/marktext/marktext/releases/download/v0.19.0/marktext-linux-0.19.0.tar.gz",
+                    "sha256": "f34d7ae956ab36dc0e85889ac24297b226a50c048c345dfd1ac6450c6eb946ce",
+                    "dest": "marktext_binary",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 241810,
+                        "stable-only": true,
+                        "url-template": "https://github.com/marktext/marktext/releases/download/v0.19.0/marktext-linux-$version.tar.gz"
+                    }
                 },
                 {
                     "type": "file",
                     "path": "marktext.sh"
                 },
                 {
-                    "type": "patch",
-                    "path": "fix-appdata.patch"
+                    "type": "file",
+                    "path": "marktext.desktop"
+                },
+                {
+                    "type": "file",
+                    "path": "marktext.appdata.xml"
+                },
+                {
+                    "type": "file",
+                    "path": "marktext.png"
                 }
             ]
         }
     ]
 }
-
