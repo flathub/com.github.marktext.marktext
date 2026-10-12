@@ -42,10 +42,10 @@
                     "sha256": "1d032d403260107c6ccd7f2468952da80ffa0b3aab4b2d1a29c56267d2dfb73e",
                     "dest": "marktext_binary",
                     "x-checker-data": {
-                        "type": "anitya",
-                        "project-id": 241810,
-                        "stable-only": true,
-                        "url-template": "https://github.com/marktext/marktext/releases/download/v0.21.2/marktext-linux-$version.tar.gz"
+                        "type": "json",
+                        "url": "https://api.github.com/repos/marktext/marktext/releases/latest",
+                        "version-query": ".tag_name | sub(\"^v\"; \"\")",
+                        "url-query": ".assets[] | select(.name==\"marktext-linux-\" + $version + \".tar.gz\") | .browser_download_url"
                     }
                 },
                 {
