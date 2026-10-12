@@ -6,7 +6,6 @@
     "runtime-version": "26.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "marktext",
-    "rename-appdata-file": "marktext.appdata.xml",
     "rename-desktop-file": "marktext.desktop",
     "rename-icon": "marktext",
     "separate-locales": false,
@@ -29,7 +28,7 @@
             "buildsystem": "simple",
             "build-commands": [
                 "install -Dm644 marktext.desktop -t /app/share/applications/",
-                "install -Dm644 marktext.appdata.xml -t /app/share/metainfo/",
+                "install -Dm644 ${FLATPAK_ID}.metainfo.xml -t /app/share/metainfo/",
                 "install -Dm644 marktext.png -t /app/share/icons/hicolor/512x512/apps/",
                 "mkdir -p /app/marktext",
                 "mv marktext_binary/* /app/marktext",
@@ -59,7 +58,7 @@
                 },
                 {
                     "type": "file",
-                    "path": "marktext.appdata.xml"
+                    "path": "com.github.marktext.marktext.metainfo.xml"
                 },
                 {
                     "type": "file",
