@@ -1,12 +1,11 @@
 {
     "app-id": "com.github.marktext.marktext",
     "base": "org.electronjs.Electron2.BaseApp",
-    "base-version": "25.08",
+    "base-version": "26.08",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "25.08",
+    "runtime-version": "26.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "marktext",
-    "rename-appdata-file": "marktext.appdata.xml",
     "rename-desktop-file": "marktext.desktop",
     "rename-icon": "marktext",
     "separate-locales": false,
@@ -29,7 +28,7 @@
             "buildsystem": "simple",
             "build-commands": [
                 "install -Dm644 marktext.desktop -t /app/share/applications/",
-                "install -Dm644 marktext.appdata.xml -t /app/share/metainfo/",
+                "install -Dm644 ${FLATPAK_ID}.metainfo.xml -t /app/share/metainfo/",
                 "install -Dm644 marktext.png -t /app/share/icons/hicolor/512x512/apps/",
                 "mkdir -p /app/marktext",
                 "mv marktext_binary/* /app/marktext",
@@ -39,14 +38,14 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/marktext/marktext/releases/download/v0.19.0/marktext-linux-0.19.0.tar.gz",
-                    "sha256": "f34d7ae956ab36dc0e85889ac24297b226a50c048c345dfd1ac6450c6eb946ce",
+                    "url": "https://github.com/marktext/marktext/releases/download/v0.21.2/marktext-linux-0.21.2.tar.gz",
+                    "sha256": "1d032d403260107c6ccd7f2468952da80ffa0b3aab4b2d1a29c56267d2dfb73e",
                     "dest": "marktext_binary",
                     "x-checker-data": {
-                        "type": "anitya",
-                        "project-id": 241810,
-                        "stable-only": true,
-                        "url-template": "https://github.com/marktext/marktext/releases/download/v0.19.0/marktext-linux-$version.tar.gz"
+                        "type": "json",
+                        "url": "https://api.github.com/repos/marktext/marktext/releases/latest",
+                        "version-query": ".tag_name | sub(\"^v\"; \"\")",
+                        "url-query": ".assets[] | select(.name==\"marktext-linux-\" + $version + \".tar.gz\") | .browser_download_url"
                     }
                 },
                 {
@@ -59,7 +58,7 @@
                 },
                 {
                     "type": "file",
-                    "path": "marktext.appdata.xml"
+                    "path": "com.github.marktext.marktext.metainfo.xml"
                 },
                 {
                     "type": "file",
