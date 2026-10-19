@@ -56,6 +56,9 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="0.22.0" date="2026-10-18">
+      <url>https://github.com/marktext/marktext/releases/tag/v0.22.0</url>
+    </release>
     <release date="2026-10-11" version="0.21.2"/>
     <release date="2026-10-08" version="0.21.1"/>
     <release date="2026-10-08" version="0.21.0"/>
