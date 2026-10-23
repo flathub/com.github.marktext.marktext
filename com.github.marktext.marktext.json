@@ -38,8 +38,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/marktext/marktext/releases/download/v0.22.0/marktext-linux-0.22.0.tar.gz",
-                    "sha256": "ff0b907fb84d066316b27b3b54f2ad9f9f6b4e67c06c4d9aea739ef3be80d9d3",
+                    "url": "https://github.com/marktext/marktext/releases/download/v0.23.0/marktext-linux-0.23.0.tar.gz",
+                    "sha256": "ed377fe3a2c255212667a083a3e5e645633a5fd760ad7554c3f56785541b9214",
                     "dest": "marktext_binary",
                     "x-checker-data": {
                         "type": "json",
