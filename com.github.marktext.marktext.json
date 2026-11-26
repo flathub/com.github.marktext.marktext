@@ -14,7 +14,7 @@
         "--socket=wayland",
         "--share=ipc",
         "--share=network",
-        "--filesystem=host",
+        "--filesystem=home",
         "--filesystem=/tmp",
         "--device=dri",
         "--talk-name=com.canonical.AppMenu.Registrar",
